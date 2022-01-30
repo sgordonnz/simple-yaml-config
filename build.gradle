@@ -1,0 +1,21 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id 'java'
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_1_8
+
+group = project.maven_group
+version = project.version
+archivesBaseName = project.archives_base_name
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'it.unimi.dsi:fastutil:8.5.6'
+    implementation 'org.yaml:snakeyaml:1.30'
+    shadow 'org.yaml:snakeyaml:1.30'
+}
